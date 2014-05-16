@@ -1,0 +1,32 @@
+{
+  "name": "nemo-drivex",
+  "version": "0.1.2",
+  "description": "Selenium webdriver extensions for Nemo automation framework",
+  "scripts": {
+    "test": "grunt"
+  },
+  "dependencies": {
+    "async": "0.1.x",
+    "nconf": "~0.6.7"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "~1.10.0",
+    "chai": "~1.6.0",
+    "grunt": "~0.4.1",
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-contrib-jshint": "~0.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.paypal.com/NodeTestTools/nemo-drivex.git"
+  },
+  "keywords": [
+    "Selenium, Automation"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "author": "Matt Edelman <medelman@paypal.com>",
+  "license": "MIT"
+}
