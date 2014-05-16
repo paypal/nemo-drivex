@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.paypal.com/NodeTestTools/nemo-drivex.git"
+    "url": "git://github.com/paypal/nemo-drivex.git"
   },
   "keywords": [
     "Selenium, Automation"
@@ -28,5 +28,5 @@
     "node": ">= 0.8.0"
   },
   "author": "Matt Edelman <medelman@paypal.com>",
-  "license": "MIT"
+  "license": "http://www.apache.org/licenses/LICENSE-2.0"
 }
