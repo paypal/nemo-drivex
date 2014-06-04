@@ -3,6 +3,8 @@
 
 Selenium webdriver extensions for Nemo automation framework. Adapts JSON-formatted locator objects to common selenium-webdriver operations.
 
+Unless you plan to get your hands dirty and author your own 'view' plugin (see [nemo-view](https://github.com/paypal/nemo-view)), you probably won't be interacting with nemo-drivex directly, besides adding it as a dependency and adding it to your nemo-plugins.json config. If you are planning to use nemo-view, just start with the docs there.
+
 ## Installation
 
 1. Please install nemo to your project as described here: https://github.com/paypal/nemo/blob/master/README.md
