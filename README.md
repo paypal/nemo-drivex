@@ -5,6 +5,8 @@ Selenium webdriver extensions for Nemo automation framework. Adapts JSON-formatt
 
 Unless you plan to get your hands dirty and author your own 'view' plugin (see [nemo-view](https://github.com/paypal/nemo-view)), you probably won't be interacting with nemo-drivex directly, besides adding it as a dependency and adding it to your nemo-plugins.json config. If you are planning to use nemo-view, just start with the docs there.
 
+Register as "drivex" (see below)
+
 [![Build Status](https://travis-ci.org/paypal/nemo-drivex.svg?branch=master)](https://travis-ci.org/paypal/nemo-drivex)
 
 ## Installation
@@ -13,6 +15,16 @@ Unless you plan to get your hands dirty and author your own 'view' plugin (see [
 2. Add this plugin to your package.json dev dependencies ("nemo-user": "~0.1.0")
 3. npm install
 4. add nemo-drivex to your config/nemo-plugins.json file
+```javascript
+{
+	"plugins": {
+		"drivex": {
+			"module": "nemo-drivex",
+			"register": true
+		}
+	}
+}
+```
 5. access drivex via the nemo namespace
 
 ## Locator explanation
