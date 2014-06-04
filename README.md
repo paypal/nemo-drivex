@@ -1,14 +1,36 @@
 # nemo-drivex
 
 
-Selenium webdriver extensions for Nemo automation framework. Wraps around node-ppuser (https://github.paypal.com/NodeTestTools/node-ppuser)
+Selenium webdriver extensions for Nemo automation framework. Adapts JSON-formatted locator objects to common selenium-webdriver operations.
 
 ## Installation
 
-1. Please install nemo to your project as described here: https://github.paypal.com/NodeTestTools/nemo/blob/master/README.md
-2. Add this plugin to your package.json dev dependencies ("nemo-user": "0.0.1")
+1. Please install nemo to your project as described here: https://github.com/paypal/nemo/blob/master/README.md
+2. Add this plugin to your package.json dev dependencies ("nemo-user": "~0.1.0")
 3. npm install
+4. add nemo-drivex to your config/nemo-plugins.json file
+5. access drivex via the nemo namespace
 
+## Locator explanation
+
+The JSON locators expected by nemo-drivex would look like this:
+```javascript
+{
+  "locator": "#result .result",
+  "type": "id"
+}
+```
+
+type would be any of the accepted locator strategies of the current version of selenium-webdriver: e.g. id, name, css, className, linkText, partialLinkText
+
+locator would be the string which would locate the element(s) via the selected strategy
+
+##Example usage
+```javascript
+var resultEl = nemo.drivex.find({'locator': '#result .result', 'type': 'css'});
+
+//resultEl will be a selenium-webdriver promise, which will resolve to a found element or null
+```
 ## API
 
 
