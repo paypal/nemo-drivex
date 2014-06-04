@@ -25,7 +25,6 @@ Register as "drivex" (see below)
 	}
 }
 ```
-5. access drivex via the nemo namespace
 
 ## Locator explanation
 
