@@ -12,7 +12,7 @@ Register as "drivex" (see below)
 ## Installation
 
 1. Please install nemo to your project as described here: https://github.com/paypal/nemo/blob/master/README.md
-2. Add this plugin to your package.json dev dependencies ("nemo-user": "~0.1.0")
+2. Add this plugin to your package.json dev dependencies ("nemo-drivex": "~0.1.1")
 3. npm install
 4. add nemo-drivex to your config/nemo-plugins.json file
 ```javascript
