@@ -1,6 +1,6 @@
 {
   "name": "nemo-drivex",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Selenium webdriver extensions for Nemo automation framework",
   "scripts": {
     "test": "grunt"
@@ -29,8 +29,10 @@
     "node": ">= 0.8.0"
   },
   "author": "Matt Edelman <medelman@paypal.com>",
-  "licenses": [{
-    "type": "Apache 2.0",
-    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-  }]
+  "licenses": [
+    {
+      "type": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ]
 }
