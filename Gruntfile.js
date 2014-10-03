@@ -24,10 +24,10 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// For this to work, you need to have run `npm install grunt-simple-mocha`
+	// test
 	grunt.loadNpmTasks('grunt-simple-mocha');
+	// lint
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	// Add a default task. This is optional, of course :)
+	// default task
 	grunt.registerTask('default', ['simplemocha', 'jshint']);
-	// Add a default task. This is optional, of course :)
 };
