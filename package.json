@@ -11,12 +11,16 @@
   },
   "main": "index.js",
   "registerAs": "drivex",
+  "peerDependencies": {
+    "nemo": "^0.3.0"
+  },
   "devDependencies": {
-    "mocha": "~1.10.0",
     "chai": "~1.6.0",
     "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.7.1",
     "grunt-simple-mocha": "~0.4.0",
-    "grunt-contrib-jshint": "~0.7.1"
+    "mocha": "~1.10.0",
+    "nemo": "^0.3.1"
   },
   "repository": {
     "type": "git",
