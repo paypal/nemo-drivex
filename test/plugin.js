@@ -5,7 +5,7 @@ var assert = require('assert');
 
 var config = {
   nemoData: {
-    targetBrowser: "chrome",
+    targetBrowser: "phantomjs",
     localServer: true,
     targetBaseUrl: "https://github.com/paypal/nemo-drivex/blob/master/README.md"
   },
