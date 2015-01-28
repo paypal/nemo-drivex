@@ -87,11 +87,26 @@ describe("nemo-drivex @plugin@", function () {
    * @param locator {LocatorJSON}
    * @param timeout {Number}
    * @param msg {String} optional message for any error messages
-   * @returns {Promise} resolves to true or rejected
+   * @returns {Promise} resolves to true or false
    */
   describe("@waitForElement@ method", function() {
     it("should exist", function () {
       assert.ok(nemo.drivex.waitForElement);
+    });
+    it("should return an element that exists", function(done) {
+       nemo.drivex.waitForElement(nemo.wd.By.tagName("body"), 5000, "couldn't find body tag").then(function(elt) {
+         return elt.getTagName();
+       }).then(function(tagName) {
+         assert.equal(tagName, "body");
+         done();
+       })
+    });
+    it("should resolve promise with false when element doesn't exist", function(done) {
+      nemo.drivex.waitForElement(nemo.wd.By.tagName("bordy"), 1000, "couldn't find bordy tag").then(function(elt) {
+        assert.equal(elt, false);
+        console.log(elt);
+        done();
+      })
     });
   });
   /**

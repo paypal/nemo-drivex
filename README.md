@@ -1002,7 +1002,7 @@ Wait for timeout milliseconds for the WebElement to be present
 
 
 <div class="param-desc">
-resolves to true or rejected
+resolves to true or false
 </div>
 
 
