@@ -3,7 +3,8 @@
   "version": "0.3.0",
   "description": "Selenium webdriver extensions for Nemo automation framework",
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "cover": "grunt coverage"
   },
   "dependencies": {
     "async": "0.1.x",
@@ -18,7 +19,9 @@
     "chai": "~1.6.0",
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.7.1",
+    "grunt-mocha-istanbul": "^2.3.0",
     "grunt-simple-mocha": "~0.4.0",
+    "istanbul": "^0.2.16",
     "mocha": "~1.10.0",
     "nemo": "^0.3.1"
   },

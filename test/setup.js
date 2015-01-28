@@ -3,8 +3,8 @@ var returnObj = {
 	"driver": true,
 	"wd": true
 };
-describe("nemo-drivex ", function () {
-	it("should get set up", function (done) {
+describe("nemo-drivex setup method", function () {
+	it("should return", function (done) {
 		NemoDriveX.setup({}, returnObj, function (err, config, returnObj) {
 			if (returnObj.drivex) {
 				//console.log("user", returnObj.user);
