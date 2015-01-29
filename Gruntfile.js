@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 			coverage: {
 				src: 'test/*.js', // a folder works nicely
 				options: {
-					mochaOptions: ["--grep", "@waitForElement@"],
+					mochaOptions: null,//["--grep", "@waitForElement@"],
 					coverage: true,
 					timeout: 30000
 				}

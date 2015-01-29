@@ -47,6 +47,24 @@ describe("nemo-drivex @plugin@", function () {
     it("should exist", function () {
       assert.ok(nemo.drivex.find);
     });
+    it("should resolve to a web element", function (done) {
+      nemo.drivex.find({locator: 'body', type: 'css'}).then(function(elt) {
+        return elt.getTagName();
+      }).then(function(tagName) {
+        assert.equal(tagName, "body");
+        done();
+      });
+    });
+    it("should return a promise which is rejected", function (done) {
+      nemo.drivex.find({locator: 'bordy', type: 'css'}).then(function(elt) {
+        return elt.getTagName();
+      }).then(function(tagName) {
+        assert.equal(tagName, "body");
+        done(new Error('shouldnt have succeeded'));
+      }, function () {
+        done();
+      });
+    });
   });
 
   /**
@@ -99,7 +117,7 @@ describe("nemo-drivex @plugin@", function () {
        }).then(function(tagName) {
          assert.equal(tagName, "body");
          done();
-       })
+       });
     });
     it("should resolve promise with false when element doesn't exist", function(done) {
       nemo.drivex.waitForElement(nemo.wd.By.tagName("bordy"), 1000, "couldn't find bordy tag").then(function(elt) {
