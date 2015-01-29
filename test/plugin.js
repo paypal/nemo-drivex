@@ -77,6 +77,22 @@ describe("nemo-drivex @plugin@", function () {
     it("should exist", function () {
       assert.ok(nemo.drivex.finds);
     });
+    it("should resolve to an array of web elements", function (done) {
+      nemo.drivex.finds({locator: 'h4', type: 'css'}).then(function(elts) {
+        return elts[0].getTagName();
+      }).then(function(tagName) {
+        assert.equal(tagName, "h4");
+        done();
+      });
+    });
+    it("should return a promise which is rejected", function (done) {
+      nemo.drivex.find({locator: 'bordy', type: 'css'}).then(function(elts) {
+        done(new Error('shouldnt have succeeded'));
+      }, function (e) {
+        console.log('error is', e.code);
+        done();
+      });
+    });
   });
   /**
    * present wraps Selenium WebDriver/WebElement.isElementPresent
