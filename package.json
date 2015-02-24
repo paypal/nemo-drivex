@@ -1,6 +1,6 @@
 {
   "name": "nemo-drivex",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Selenium webdriver extensions for Nemo automation framework",
   "scripts": {
     "test": "grunt",
