@@ -8,12 +8,14 @@
   },
   "dependencies": {
     "async": "0.1.x",
+    "debug": "^2.1.1",
     "nconf": "~0.6.7"
   },
   "main": "index.js",
   "registerAs": "drivex",
   "peerDependencies": {
-    "nemo": "^0.3.0"
+    "nemo": "^0.3.0",
+    "nemo-locatex": "^0.4.0"
   },
   "devDependencies": {
     "chai": "~1.6.0",
