@@ -46,6 +46,10 @@ var resultEl = nemo.drivex.find({'locator': '#result .result', 'type': 'css'});
 
 //resultEl will be a selenium-webdriver promise, which will resolve to a found element or null
 ```
+
+## Debugging
+
+`nemo-drivex` uses the [debug](https://www.npmjs.com/package/debug) module. For detailed debug messages, set `DEBUG=nemo-drivex` to the running process.
 ## API
 
 
@@ -1002,7 +1006,7 @@ Wait for timeout milliseconds for the WebElement to be present
 
 
 <div class="param-desc">
-resolves to true or false
+resolves to true or throw error
 </div>
 
 

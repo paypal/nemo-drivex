@@ -127,18 +127,18 @@ describe("nemo-drivex @plugin@", function () {
     it("should exist", function () {
       assert.ok(nemo.drivex.waitForElement);
     });
-    it("should return an element that exists", function(done) {
-       nemo.drivex.waitForElement(nemo.wd.By.tagName("body"), 5000, "couldn't find body tag").then(function(elt) {
-         return elt.getTagName();
-       }).then(function(tagName) {
-         assert.equal(tagName, "body");
+    it("should return true when an element exists", function(done) {
+      console.log(nemo.wd.By.tagName);
+       nemo.drivex.waitForElement({'locator': 'body', 'type': 'tagName'}, 5000, "couldn't find body tag").then(function(found) {
+         assert.equal(found, true);
          done();
        });
     });
-    it("should resolve promise with false when element doesn't exist", function(done) {
-      nemo.drivex.waitForElement(nemo.wd.By.tagName("bordy"), 1000, "couldn't find bordy tag").then(function(elt) {
-        assert.equal(elt, false);
-        console.log(elt);
+    it("should reject promise when element doesn't exist", function(done) {
+      nemo.drivex.waitForElement({'locator': 'bordy', 'type': 'tagName'}, 1000, "couldn't find bordy tag").then(function(elt) {
+
+        done(new Error('shouldnt have got here'));
+      }, function (err) {
         done();
       })
     });
