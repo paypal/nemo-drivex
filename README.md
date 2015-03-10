@@ -12,7 +12,7 @@ Register as "drivex" (see below)
 ## Installation
 
 1. Please install nemo to your project as described here: https://github.com/paypal/nemo/blob/master/README.md
-2. Add this plugin to your package.json dev dependencies ("nemo-drivex": "^0.1.2")
+2. Add this plugin to your package.json dev dependencies ("nemo-drivex": "^0.3.0")
 3. npm install
 4. add nemo-drivex to your config/nemo-plugins.json file
 ```javascript
@@ -46,6 +46,10 @@ var resultEl = nemo.drivex.find({'locator': '#result .result', 'type': 'css'});
 
 //resultEl will be a selenium-webdriver promise, which will resolve to a found element or null
 ```
+
+## Debugging
+
+`nemo-drivex` uses the [debug](https://www.npmjs.com/package/debug) module. For detailed debug messages, set `DEBUG=nemo-drivex` to the running process.
 ## API
 
 
@@ -1002,7 +1006,7 @@ Wait for timeout milliseconds for the WebElement to be present
 
 
 <div class="param-desc">
-resolves to true or rejected
+resolves to true or throw error
 </div>
 
 

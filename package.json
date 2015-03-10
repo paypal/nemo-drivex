@@ -1,22 +1,31 @@
 {
   "name": "nemo-drivex",
-  "version": "0.1.4",
+  "version": "0.4.4",
   "description": "Selenium webdriver extensions for Nemo automation framework",
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "cover": "grunt coverage"
   },
   "dependencies": {
     "async": "0.1.x",
+    "debug": "^2.1.1",
     "nconf": "~0.6.7"
   },
   "main": "index.js",
   "registerAs": "drivex",
+  "peerDependencies": {
+    "nemo": "^0.4.0",
+    "nemo-locatex": "^0.4.0"
+  },
   "devDependencies": {
-    "mocha": "~1.10.0",
     "chai": "~1.6.0",
     "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-mocha-istanbul": "^2.3.0",
     "grunt-simple-mocha": "~0.4.0",
-    "grunt-contrib-jshint": "~0.7.1"
+    "istanbul": "^0.2.16",
+    "mocha": "^2.1.0",
+    "nemo": "^0.4.0"
   },
   "repository": {
     "type": "git",
@@ -29,8 +38,10 @@
     "node": ">= 0.8.0"
   },
   "author": "Matt Edelman <medelman@paypal.com>",
-  "licenses": [{
-    "type": "Apache 2.0",
-    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-  }]
+  "licenses": [
+    {
+      "type": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ]
 }
