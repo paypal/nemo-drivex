@@ -144,6 +144,33 @@ describe("nemo-drivex @plugin@", function () {
     });
   });
   /**
+   * waitForElementVisible Wait for timeout milliseconds for the WebElement to be visible
+   * @param locator {LocatorJSON}
+   * @param timeout {Number}
+   * @param msg {String} optional message for any error messages
+   * @returns {Promise} resolves to true or false
+   */
+  describe("@waitForElementVisible@ method", function() {
+    it("should be visible", function () {
+      assert.ok(nemo.drivex.waitForElementVisible);
+    });
+    it("should return true when an element is visible", function(done) {
+      console.log(nemo.wd.By.tagName);
+      nemo.drivex.waitForElementVisible({'locator': 'body', 'type': 'tagName'}, 5000, "couldn't find body tag").then(function(found) {
+        assert.equal(found, true);
+        done();
+      });
+    });
+    it("should reject promise when element is not visible", function(done) {
+      nemo.drivex.waitForElementVisible({'locator': 'bordy', 'type': 'tagName'}, 1000, "couldn't find bordy tag").then(function(elt) {
+
+        done(new Error('shouldnt have got here'));
+      }, function (err) {
+        done();
+      })
+    });
+  });
+  /**
    * oneDisplayed determine if only one of the WebElements in the elements array is visible
    * @param elements {Array} array of WebElements
    * @returns {Promise} promise resolves to single visible element from "elements" or Error
