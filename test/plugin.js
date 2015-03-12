@@ -155,7 +155,6 @@ describe("nemo-drivex @plugin@", function () {
       assert.ok(nemo.drivex.waitForElementVisible);
     });
     it("should return true when an element is visible", function(done) {
-      console.log(nemo.wd.By.tagName);
       nemo.drivex.waitForElementVisible({'locator': 'body', 'type': 'tagName'}, 5000, "couldn't find body tag").then(function(found) {
         assert.equal(found, true);
         done();
