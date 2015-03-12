@@ -162,7 +162,7 @@ describe("nemo-drivex @plugin@", function () {
       });
     });
     it("should reject promise when element is not visible", function(done) {
-      nemo.drivex.waitForElementVisible({'locator': 'bordy', 'type': 'tagName'}, 1000, "couldn't find body tag").then(function(elt) {
+      nemo.drivex.waitForElementVisible({'locator': 'bordy', 'type': 'tagName'}, 1000, "couldn't find bordy tag").then(function(elt) {
         done(new Error('shouldnt have got here'));
       }, function (err) {
         done();
