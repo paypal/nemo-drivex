@@ -1030,6 +1030,125 @@ Type
 
 </dl>
 
+<dt>
+<h4 class="name" id="waitForElementVisible"><span class="type-signature"></span>waitForElementVisible<span class="signature">(locator, timeout)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+
+</dt>
+<dd>
+
+
+<div class="description">
+Wait for timeout milliseconds for the WebElement to be visible
+</div>
+
+
+
+
+
+
+
+<h5>Parameters:</h5>
+
+
+<table class="params">
+<thead>
+<tr>
+
+<th>Name</th>
+
+
+<th>Type</th>
+
+
+
+
+
+<th class="last">Description</th>
+</tr>
+</thead>
+
+<tbody>
+
+
+<tr>
+
+<td class="name"><code>locator</code></td>
+
+
+<td class="type">
+
+
+<span class="param-type"><a href="#LocatorJSON">LocatorJSON</a></span>
+
+
+
+</td>
+
+
+
+
+
+<td class="description last"></td>
+</tr>
+
+
+
+<tr>
+
+<td class="name"><code>timeout</code></td>
+
+
+<td class="type">
+
+
+<span class="param-type">Number</span>
+
+
+
+</td>
+
+
+
+
+
+<td class="description last"></td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+<h5>Returns:</h5>
+
+
+<div class="param-desc">
+resolves to true or throw error
+</div>
+
+
+
+<dl>
+<dt>
+Type
+</dt>
+<dd>
+
+<span class="param-type">Promise</span>
+
+
+</dd>
+</dl>
+
+
+
+
+</dd>
+
+</dl>
+
 <h3 class="subsection-title">Special Objects</h3>
 <a name="LocatorJSON"></a>
 <dl>
