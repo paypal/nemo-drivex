@@ -90,10 +90,7 @@ describe("nemo-drivex @plugin@", function () {
     it("should return a promise which is rejected", function (done) {
       nemo.drivex.find({locator: 'bordy', type: 'css'}).then(function (elts) {
         done(new Error('shouldnt have succeeded'));
-      }, function (e) {
-        console.log('error is', e.code);
-        done();
-      });
+      }, util.doneSuccess(done));
     });
   });
   /**
@@ -134,7 +131,6 @@ describe("nemo-drivex @plugin@", function () {
       assert.ok(nemo.drivex.waitForElement);
     });
     it("should return true when an element exists", function (done) {
-      console.log(nemo.wd.By.tagName);
       nemo.drivex.waitForElement({
         'locator': 'body',
         'type': 'tagName'
@@ -165,7 +161,7 @@ describe("nemo-drivex @plugin@", function () {
       assert.ok(nemo.drivex.waitForElementVisible);
     });
     it("should return true when an element is visible", function (done) {
-      var start;
+      var startMS;
       nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
       util.waitForJSReady(nemo).then(function() {
         startMS = Date.now();
