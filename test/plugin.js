@@ -175,7 +175,7 @@ describe("nemo-drivex @plugin@", function () {
         assert.equal(found, true);
         assert.ok(foundMS > 4000 && foundMS < 5000);
         done();
-      });
+      }, util.doneError(done));
     });
     it("should reject promise when element is not visible", function (done) {
       nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
@@ -186,6 +186,24 @@ describe("nemo-drivex @plugin@", function () {
       }, 6000, "couldn't find outy div visible").then(function (elt) {
         done(new Error('shouldnt have got here'));
       }, util.doneSuccess(done));
+    });
+    it("should reject promise when element is not present, but only after the appropriate timeout", function (done) {
+      var startMS;
+      nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
+      util.waitForJSReady(nemo).then(function() {
+        startMS = Date.now();
+      });
+      nemo.drivex.waitForElementVisible({
+        'locator': 'idontexist',
+        'type': 'id'
+      }, 3000, "couldn't find idontexist as visible").then(function (elt) {
+        done(new Error('shouldnt have got here'));
+      }, function (err) {
+        var foundMS = Date.now() - startMS;
+        assert(err);
+        assert.ok(foundMS > 3000);
+        done();
+      });
     });
   });
   /**
