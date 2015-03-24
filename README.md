@@ -909,6 +909,256 @@ Type
 
 </dd>
 
+<dt>
+<h4 class="name" id="visible"><span class="type-signature"></span>visible<span class="signature">(locator, el)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+
+</dt>
+<dd>
+
+
+<div class="description">
+wraps Selenium WebDriver/WebElement.isDisplayed()
+</div>
+
+
+
+
+
+
+
+<h5>Parameters:</h5>
+
+
+<table class="params">
+<thead>
+<tr>
+
+<th>Name</th>
+
+
+<th>Type</th>
+
+
+
+
+
+<th class="last">Description</th>
+</tr>
+</thead>
+
+<tbody>
+
+
+<tr>
+
+<td class="name"><code>locator</code></td>
+
+
+<td class="type">
+
+
+<span class="param-type"><a href="#LocatorJSON">LocatorJSON</a></span>
+
+
+
+</td>
+
+
+
+
+
+<td class="description last"></td>
+</tr>
+
+
+
+<tr>
+
+<td class="name"><code>el</code></td>
+
+
+<td class="type">
+
+
+<span class="param-type">WebElement</span>
+
+
+
+</td>
+
+
+
+
+
+<td class="description last"></td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+
+<div class="param-desc">
+resolves to true or rejected
+</div>
+
+
+
+<dl>
+<dt>
+Type
+</dt>
+<dd>
+
+<span class="param-type">Promise</span>
+
+
+</dd>
+</dl>
+
+
+
+
+</dd>
+
+<dt>
+<h4 class="name" id="notVisible"><span class="type-signature"></span>notVisible<span class="signature">(locator, el)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+
+</dt>
+<dd>
+
+
+<div class="description">
+wraps Selenium WebDriver/!WebElement.isDisplayed()
+</div>
+
+
+
+
+
+
+
+<h5>Parameters:</h5>
+
+
+<table class="params">
+<thead>
+<tr>
+
+<th>Name</th>
+
+
+<th>Type</th>
+
+
+
+
+
+<th class="last">Description</th>
+</tr>
+</thead>
+
+<tbody>
+
+
+<tr>
+
+<td class="name"><code>locator</code></td>
+
+
+<td class="type">
+
+
+<span class="param-type"><a href="#LocatorJSON">LocatorJSON</a></span>
+
+
+
+</td>
+
+
+
+
+
+<td class="description last"></td>
+</tr>
+
+
+
+<tr>
+
+<td class="name"><code>el</code></td>
+
+
+<td class="type">
+
+
+<span class="param-type">WebElement</span>
+
+
+
+</td>
+
+
+
+
+
+<td class="description last"></td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+
+<div class="param-desc">
+resolves to true or rejected
+</div>
+
+
+
+<dl>
+<dt>
+Type
+</dt>
+<dd>
+
+<span class="param-type">Promise</span>
+
+
+</dd>
+</dl>
+
+
+
+
+</dd>
+
 
 
 <dt>
@@ -1040,6 +1290,125 @@ Type
 
 <div class="description">
 Wait for timeout milliseconds for the WebElement to be visible
+</div>
+
+
+
+
+
+
+
+<h5>Parameters:</h5>
+
+
+<table class="params">
+<thead>
+<tr>
+
+<th>Name</th>
+
+
+<th>Type</th>
+
+
+
+
+
+<th class="last">Description</th>
+</tr>
+</thead>
+
+<tbody>
+
+
+<tr>
+
+<td class="name"><code>locator</code></td>
+
+
+<td class="type">
+
+
+<span class="param-type"><a href="#LocatorJSON">LocatorJSON</a></span>
+
+
+
+</td>
+
+
+
+
+
+<td class="description last"></td>
+</tr>
+
+
+
+<tr>
+
+<td class="name"><code>timeout</code></td>
+
+
+<td class="type">
+
+
+<span class="param-type">Number</span>
+
+
+
+</td>
+
+
+
+
+
+<td class="description last"></td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+<h5>Returns:</h5>
+
+
+<div class="param-desc">
+resolves to true or throw error
+</div>
+
+
+
+<dl>
+<dt>
+Type
+</dt>
+<dd>
+
+<span class="param-type">Promise</span>
+
+
+</dd>
+</dl>
+
+
+
+
+</dd>
+
+</dl>
+
+<dt>
+<h4 class="name" id="waitForElementNotVisible"><span class="type-signature"></span>waitForElementNotVisible<span class="signature">(locator, timeout)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+
+</dt>
+<dd>
+
+
+<div class="description">
+Wait for timeout milliseconds for the WebElement to be NOT visible
 </div>
 
 

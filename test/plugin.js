@@ -116,6 +116,17 @@ describe("nemo-drivex @plugin@", function () {
     });
   });
   /**
+   * notVisible wraps Selenium WebElement.isNotVisible
+   * @param locator {LocatorJSON}
+   * @param el {WebElement}
+   * @returns {Promise} resolves to true or rejected
+   */
+  describe("@notVisible@ method", function () {
+    it("should not be visible", function () {
+      assert.ok(nemo.drivex.notVisible);
+    });
+  });
+  /**
    * waitForElement Wait for timeout milliseconds for the WebElement to be present
    * @param locator {LocatorJSON}
    * @param timeout {Number}
@@ -197,6 +208,60 @@ describe("nemo-drivex @plugin@", function () {
         'locator': 'idontexist',
         'type': 'id'
       }, 3000, "couldn't find idontexist as visible").then(function (elt) {
+        done(new Error('shouldnt have got here'));
+      }, function (err) {
+        var foundMS = Date.now() - startMS;
+        assert(err);
+        assert.ok(foundMS > 3000);
+        done();
+      });
+    });
+  });
+  /**
+   * waitForElementNotVisible Wait for timeout milliseconds for the WebElement to be NOT visible
+   * @param locator {LocatorJSON}
+   * @param timeout {Number}
+   * @param msg {String} optional message for any error messages
+   * @returns {Promise} resolves to true or false
+   */
+  describe("@waitForElementNotVisible@ method", function () {
+    it("should not be visible", function () {
+      assert.ok(nemo.drivex.waitForElementNotVisible);
+    });
+    it("should return true when element is not visible", function (done) {
+      nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
+      util.waitForJSReady(nemo);
+      nemo.drivex.waitForElementNotVisible({
+        'locator': 'outy',
+        'type': 'id'
+      }, 6000, "found outy div visible").then(function (notVisible) {
+        assert.equal(notVisible, true);
+        done();
+      }, util.doneSuccess(done));
+    });
+    it("should reject promise when element is visible", function (done) {
+      nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
+      util.waitForJSReady(nemo);
+      nemo.drivex.find({locator: '#wrapper > form > input', type: 'css'}).click();
+      nemo.driver.sleep(5000); // Waiting for element to be visible
+      nemo.drivex.waitForElementNotVisible({
+        'locator': 'outy',
+        'type': 'id'
+      }, 6000, "found outy tag").then(function (notVisible) {
+        assert.equal(notVisible, false);
+        done();
+      }, util.doneSuccess(done));
+    });
+    it("should reject promise when element is not present, but only after the appropriate timeout", function (done) {
+      var startMS;
+      nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
+      util.waitForJSReady(nemo).then(function() {
+        startMS = Date.now();
+      });
+      nemo.drivex.waitForElementNotVisible({
+        'locator': 'idontexist',
+        'type': 'id'
+      }, 3000, "couldn't find idontexist as not visible").then(function (elt) {
         done(new Error('shouldnt have got here'));
       }, function (err) {
         var foundMS = Date.now() - startMS;
