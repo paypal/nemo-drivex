@@ -23,6 +23,10 @@
     "mocha": "^2.2.4",
     "nemo": "^1.0.4"
   },
+  "peerDependencies": {
+    "nemo": "^1.0.0",
+    "nemo-locatex": "^1.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/paypal/nemo-drivex.git"
