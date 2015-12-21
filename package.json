@@ -1,31 +1,31 @@
 {
   "name": "nemo-drivex",
-  "version": "0.4.5",
+  "version": "1.0.0",
   "description": "Selenium webdriver extensions for Nemo automation framework",
   "scripts": {
     "test": "grunt",
     "cover": "grunt coverage"
   },
   "dependencies": {
-    "async": "0.1.x",
-    "debug": "^2.1.1",
-    "nconf": "~0.6.7"
+    "async": "0.9.x",
+    "debug": "^2.1.3",
+    "nconf": "~0.7.1"
   },
   "main": "index.js",
   "registerAs": "drivex",
-  "peerDependencies": {
-    "nemo": "^0.4.0",
-    "nemo-locatex": "^0.4.0"
-  },
   "devDependencies": {
-    "chai": "~1.6.0",
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.7.1",
-    "grunt-mocha-istanbul": "^2.3.0",
+    "chai": "~2.3.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.11.2",
+    "grunt-mocha-istanbul": "^2.4.0",
     "grunt-simple-mocha": "~0.4.0",
-    "istanbul": "^0.2.16",
-    "mocha": "^2.1.0",
-    "nemo": "^0.4.0"
+    "istanbul": "^0.3.13",
+    "mocha": "^2.2.4",
+    "nemo": "^1.0.4"
+  },
+  "peerDependencies": {
+    "nemo": "^1.0.0",
+    "nemo-locatex": "^1.0.0"
   },
   "repository": {
     "type": "git",
