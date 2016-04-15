@@ -164,6 +164,7 @@ describe("nemo-drivex @plugin@", function () {
       assert.ok(nemo.drivex.waitForElementVisible);
     });
     it("should return true when an element is visible", function (done) {
+      this.timeout(10000);
       var startMS;
       nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
       util.waitForJSReady(nemo).then(function() {
@@ -181,6 +182,7 @@ describe("nemo-drivex @plugin@", function () {
       });
     });
     it("should reject promise when element is not visible", function (done) {
+      this.timeout(10000);
       nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
       util.waitForJSReady(nemo);
       nemo.drivex.waitForElementVisible({

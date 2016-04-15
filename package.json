@@ -7,9 +7,9 @@
     "cover": "grunt coverage"
   },
   "dependencies": {
-    "async": "0.1.x",
+    "async": "^1.5.2",
     "debug": "^2.1.1",
-    "nconf": "~0.6.7"
+    "nconf": "^0.8.4"
   },
   "main": "index.js",
   "registerAs": "drivex",
@@ -18,13 +18,13 @@
     "nemo-locatex": "^0.4.0"
   },
   "devDependencies": {
-    "chai": "~1.6.0",
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.7.1",
-    "grunt-mocha-istanbul": "^2.3.0",
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-mocha-istanbul": "^4.0.2",
     "grunt-simple-mocha": "~0.4.0",
-    "istanbul": "^0.2.16",
-    "mocha": "^2.1.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5",
     "nemo": "^2.1.1"
   },
   "repository": {
@@ -39,8 +39,8 @@
   },
   "author": "Matt Edelman <medelman@paypal.com>",
   "contributors": [
-      "Matt Edelman <medelman@paypal.com>",
-      "Gabriel Csapo <gacsapo@paypal.com>"
+    "Matt Edelman <medelman@paypal.com>",
+    "Gabriel Csapo <gacsapo@paypal.com>"
   ],
   "licenses": [
     {
