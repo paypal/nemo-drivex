@@ -5,13 +5,13 @@ var nemo = {
 };
 describe("nemo-drivex setup method", function () {
 	it("should return", function (done) {
-		drivex.setup(nemo, function (err, nemo) {
+		drivex.setup(nemo, function (err) {
 			if (nemo.drivex) {
-				done()
+				done();
 			} else if (err) {
-				done(err)
+				done(err);
 			} else {
-				done(new Error("Didn't get drivex object back"))
+				done(new Error("Didn't get drivex object back"));
 			}
 		})
 	});
