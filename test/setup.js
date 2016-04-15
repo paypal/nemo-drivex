@@ -1,13 +1,12 @@
-var NemoDriveX = require("../index");
-var returnObj = {
+var drivex = require("../index");
+var nemo = {
 	"driver": true,
 	"wd": true
 };
 describe("nemo-drivex setup method", function () {
 	it("should return", function (done) {
-		NemoDriveX.setup({}, returnObj, function (err, config, returnObj) {
-			if (returnObj.drivex) {
-				//console.log("user", returnObj.user);
+		drivex.setup(nemo, function (err, nemo) {
+			if (nemo.drivex) {
 				done()
 			} else if (err) {
 				done(err)

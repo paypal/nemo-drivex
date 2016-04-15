@@ -14,7 +14,7 @@
   "main": "index.js",
   "registerAs": "drivex",
   "peerDependencies": {
-    "nemo": "^0.4.0",
+    "nemo": "^2.1.1",
     "nemo-locatex": "^0.4.0"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "grunt-simple-mocha": "~0.4.0",
     "istanbul": "^0.2.16",
     "mocha": "^2.1.0",
-    "nemo": "^0.4.0"
+    "nemo": "^2.1.1"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,10 @@
     "node": ">= 0.8.0"
   },
   "author": "Matt Edelman <medelman@paypal.com>",
+  "contributors": [
+      "Matt Edelman <medelman@paypal.com>",
+      "Gabriel Csapo <gacsapo@paypal.com>"
+  ],
   "licenses": [
     {
       "type": "Apache 2.0",
