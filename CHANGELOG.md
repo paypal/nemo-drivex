@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.0
+
+* upgrade support for nemo@2. See: https://github.com/paypal/nemo-drivex/pull/17
 
 ## v0.1.0
 
