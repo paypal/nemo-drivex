@@ -29,6 +29,6 @@ module.exports = {
 	*/
 	"setup": function(nemo, callback) {
 		nemo.drivex = new DriveX(nemo.driver, nemo.wd);
-		callback(null, nemo);
+		callback(null);
 	}
 };
