@@ -1,14 +1,17 @@
-var Nemo = require('nemo');
+var Nemo = require("nemo");
 var nemo = {};
-var path = require('path');
-var util = require(path.resolve(__dirname, 'util'));
-var assert = require('assert');
+var path = require("path");
+var util = require(path.resolve(__dirname, "util"));
+var assert = require("assert");
 
 var config = {
-  nemoData: {
+  "data": {
     targetBrowser: "phantomjs",
     localServer: true,
     targetBaseUrl: "https://github.com/paypal/nemo-drivex/blob/master/README.md"
+  },
+  "driver": {
+    browser: 'phantomjs'
   },
   "plugins": {
     "drivex": {
@@ -20,10 +23,10 @@ var config = {
 
 describe("nemo-drivex @plugin@", function () {
   before(function (done) {
-    (new Nemo(config)).setup().then(function (_nemo) {
-      nemo = _nemo;
-      done();
-    });
+      Nemo(config, function(err, _nemo) {
+          nemo = _nemo;
+          done();
+      });
   });
   after(function (done) {
     nemo.driver.quit().then(util.doneSuccess(done));
@@ -41,7 +44,7 @@ describe("nemo-drivex @plugin@", function () {
    */
   describe("@find@ method", function () {
     before(function (done) {
-      nemo.driver.get(nemo.props.targetBaseUrl).
+      nemo.driver.get(nemo.data.targetBaseUrl).
         then(util.doneSuccess(done));
     });
     it("should exist", function () {
@@ -73,7 +76,7 @@ describe("nemo-drivex @plugin@", function () {
    */
   describe("@finds@ method", function () {
     before(function (done) {
-      nemo.driver.get(nemo.props.targetBaseUrl).
+      nemo.driver.get(nemo.data.targetBaseUrl).
         then(util.doneSuccess(done));
     });
     it("should exist", function () {
@@ -124,7 +127,7 @@ describe("nemo-drivex @plugin@", function () {
    */
   describe("@waitForElement@ method", function () {
     before(function (done) {
-      nemo.driver.get(nemo.props.targetBaseUrl).
+      nemo.driver.get(nemo.data.targetBaseUrl).
         then(util.doneSuccess(done));
     });
     it("should exist", function () {
@@ -161,6 +164,7 @@ describe("nemo-drivex @plugin@", function () {
       assert.ok(nemo.drivex.waitForElementVisible);
     });
     it("should return true when an element is visible", function (done) {
+      this.timeout(10000);
       var startMS;
       nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
       util.waitForJSReady(nemo).then(function() {
@@ -178,6 +182,7 @@ describe("nemo-drivex @plugin@", function () {
       });
     });
     it("should reject promise when element is not visible", function (done) {
+      this.timeout(10000);
       nemo.driver.get('https://warm-river-3624.herokuapp.com/waits');
       util.waitForJSReady(nemo);
       nemo.drivex.waitForElementVisible({

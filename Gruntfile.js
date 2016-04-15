@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function(grunt) {
 	grunt.initConfig({
@@ -11,13 +11,12 @@ module.exports = function(grunt) {
 				ui: 'bdd',
 				reporter: 'spec'
 			},
-
 			all: {
 				src: ['test/*.js']
 			}
 		},
 		jshint: {
-			files: ['index.js', 'Gruntfile.js'],
+			files: ['lib/drivex.js', 'index.js'],
 			options: {
 				jshintrc: true
 			}
@@ -26,7 +25,7 @@ module.exports = function(grunt) {
 			coverage: {
 				src: 'test/*.js', // a folder works nicely
 				options: {
-					mochaOptions: null,//["--grep", "@waitForElement@"],
+					mochaOptions: null,//['--grep', '@waitForElement@'],
 					coverage: true,
 					timeout: 30000
 				}
