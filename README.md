@@ -7,7 +7,7 @@ Unless you plan to get your hands dirty and author your own 'view' plugin (see [
 
 Register as "drivex" (see below)
 
-[![Build Status](https://travis-ci.org/paypal/nemo-drivex.svg?branch=master)](https://travis-ci.org/paypal/nemo-drivex)
+[![Build Status](https://travis-ci.org/paypal/nemo-drivex.svg?branch=master)](https://travis-ci.org/paypal/nemo-drivex) [![Greenkeeper badge](https://badges.greenkeeper.io/paypal/nemo-drivex.svg)](https://greenkeeper.io/)
 
 ## Installation
 
